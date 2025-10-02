@@ -4,87 +4,91 @@
   <meta charset="UTF-8">
   <title>RizzyTechCFO</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="RizzyTechCFO - Portfolio at the intersection of engineering, accounting, finance, and analytics.">
+  <meta name="description" content="RizzyTechCFO — professional portfolio showcasing work at the intersection of engineering, accounting, finance, and analytics.">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
+    :root{
+      --bg:#f9f9f9;
+      --fg:#333;
+      --card:#ffffff;
+      --muted:#777;
+      --border:#e9e9e9;
+      --brand:#1a1a1a;
+      --link:#0a4bff;
     }
-    header {
-      background: #1a1a1a;
-      color: #fff;
-      padding: 20px 40px;
-      text-align: center;
+    *{box-sizing:border-box}
+    body{
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+      margin:0; padding:0; line-height:1.6;
+      background:var(--bg); color:var(--fg);
     }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
+    header{
+      background:var(--brand); color:#fff; text-align:center;
+      padding:28px 20px;
     }
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    header h1{margin:0; font-size:2rem; letter-spacing:.2px}
+    header p{margin:8px 0 0; color:#ddd}
+    main{
+      max-width:860px; margin:42px auto; padding:0 20px;
     }
-    section {
-      margin-bottom: 30px;
+    .card{
+      background:var(--card); border-radius:12px; padding:28px;
+      box-shadow:0 2px 8px rgba(0,0,0,.06); border:1px solid var(--border);
     }
-    h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 8px;
-      margin-bottom: 15px;
+    section{margin-bottom:26px}
+    h2{
+      font-size:1.25rem; margin:0 0 12px;
+      padding-bottom:8px; border-bottom:2px solid var(--border);
     }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      background: #f1f1f1;
-      margin-top: 40px;
+    p{margin:0 0 14px}
+    .muted{color:var(--muted); font-size:.95rem}
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    footer{
+      max-width:860px; margin:28px auto 48px; padding:0 20px; color:var(--muted);
+      text-align:center; font-size:.9rem;
     }
-    a {
-      color: #0044cc;
-      text-decoration: none;
+    .grid{
+      display:grid; gap:22px;
+      grid-template-columns: 1fr;
     }
-    a:hover {
-      text-decoration: underline;
+    @media (min-width: 760px){
+      .grid{grid-template-columns: 1fr 1fr}
     }
+    .contact p{margin:6px 0}
+    .tagline{margin-top:6px; font-size:.95rem; color:#ddd}
   </style>
 </head>
 <body>
 
   <header>
     <h1>RizzyTechCFO</h1>
-    <p>Engineering • Accounting • Finance • Analytics</p>
+    <p class="tagline">Engineering • Accounting • Finance • Analytics</p>
   </header>
 
   <main>
-    <section>
-      <h2>About Me</h2>
-      <p>
-        My name is Rizzy. I bring a background in engineering, accounting, and finance to approach challenges with both technical precision and strategic insight. 
-        My work includes financial modeling, valuation, and analytical applications aimed at supporting performance, efficiency, and decision-making.
-      </p>
-    </section>
+    <div class="grid">
+      <section class="card">
+        <h2>About</h2>
+        <p>I’m a Master of Professional Accountancy (MPAc) candidate at UC San Diego with a background in electrical engineering. I focus on building smart, scalable solutions at the intersection of accounting, finance, and analytics.</p>
+        <p>Earlier hands-on work in operations and systems thinking shaped how I now approach financial analysis and process improvement. Today I combine accounting depth with technical tools—Python, Jupyter, and statistical/ML methods—to support financial modeling, valuation, forecasting, controls, and automation. Recent work includes regression and classification workflows, ensemble methods, and scripted extraction of information from SEC filings to accelerate analysis.</p>
+        <p>My goal is to deliver practical, data-driven insights by pairing traditional accounting principles with modern analytical techniques. This site serves as a portfolio to demonstrate how engineering rigor can strengthen finance, valuation, and decision support.</p>
+        <p class="muted">Note: This GitHub Pages site is a non-commercial showcase of skills and education.</p>
+      </section>
 
-    <section>
-      <h2>Purpose</h2>
-      <p>
-        RizzyTechCFO is a professional portfolio that demonstrates how technical methods, data-driven analysis, and financial expertise can be applied across 
-        accounting, finance, valuation, and strategic problem-solving.
-      </p>
-    </section>
+      <section class="card">
+        <h2>Purpose</h2>
+        <p>This site consolidates my work, notes, and demonstrations that apply technical methods and financial expertise to real analysis. It is intended for review by instructors, peers, and prospective employers.</p>
+        <p class="muted">Viewing is welcome. Commercial use of any code or materials requires my permission.</p>
+      </section>
+    </div>
 
-    <section>
+    <section class="card contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:rizzytechcfo@gmail.com">rizzytechcfo@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
-      <p>GitHub: <a href="https://github.com/rizzytechcfo" target="_blank">github.com/rizzytechcfo</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener">linkedin.com/in/yourlinkedin</a></p>
+      <p>GitHub: <a href="https://github.com/rizzytechcfo" target="_blank" rel="noopener">github.com/rizzytechcfo</a></p>
+      <!-- Optional resume link; place a PDF named resume.pdf in the repo root -->
+      <!-- <p>Resume: <a href="resume.pdf" target="_blank" rel="noopener">Download PDF</a></p> -->
     </section>
   </main>
 
